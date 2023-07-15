@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+
+<mat-card class="fondo">
+  <mat-card-title>Listado de productos</mat-card-title>
+  <div *ngIf="mostrarDatos">
+    <ul>
+      <li *ngFor="let dato of productos">{{ dato.nombre }}, {{ dato.costo }}</li>
+    </ul>
+  </div>
+  <button mat-button (click)="funcMostrarDatos()" class="mat-button">{{ mostrarDatos ? 'Ocultar Lista' : 'Mostrar Lista' }}</button>
+</mat-card>
+
